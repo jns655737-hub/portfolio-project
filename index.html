@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,26 +15,29 @@
   </script>
 </head>
 
-<body class="bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 text-gray-900 dark:bg-[#05060f] dark:text-gray-100">
+<body
+  class="bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 text-gray-900 dark:bg-[#05060f] dark:text-gray-100">
 
-<!-- Scroll Progress Bar -->
-<div class="fixed top-0 left-0 w-full z-[60]">
-  <div id="progressBar"
-       class="h-1 bg-gradient-to-r from-indigo-500 to-pink-500 w-0 transition-all duration-300">
+  <!-- Scroll Progress Bar -->
+  <div class="fixed top-0 left-0 w-full z-[60]">
+    <div id="progressBar" class="h-1 bg-gradient-to-r from-indigo-500 to-pink-500 w-0 transition-all duration-300">
+    </div>
   </div>
-</div>
 
   <!-- Navbar -->
-  <nav class="fixed w-full top-0 bg-white/80 backdrop-blur dark:bg-[#0b0d1a]/90 shadow z-50 border-b dark:border-gray-800">
+  <nav
+    class="fixed w-full top-0 bg-white/80 backdrop-blur dark:bg-[#0b0d1a]/90 shadow z-50 border-b dark:border-gray-800">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold bg-gradient-to-r from-indigo-500 to-pink-500 text-transparent bg-clip-text">Jeevan NS</h1>
+      <h1 class="text-xl font-bold bg-gradient-to-r from-indigo-500 to-pink-500 text-transparent bg-clip-text">Jeevan NS
+      </h1>
       <div class="space-x-6 hidden md:flex font-medium">
         <a href="#projects" class="nav-link hover:text-purple-400">Projects</a>
         <a href="#education" class="nav-link hover:text-purple-400">Education</a>
         <a href="#skills" class="nav-link hover:text-purple-400">Skills</a>
         <a href="#contact" class="nav-link hover:text-purple-400">Contact</a>
       </div>
-      <button onclick="toggleTheme()" class="ml-4 bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-3 py-1 rounded">
+      <button onclick="toggleTheme()"
+        class="ml-4 bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-3 py-1 rounded">
         🌙
       </button>
     </div>
@@ -41,36 +45,40 @@
 
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center px-4">
-    <img src="https://i.pravatar.cc/150" class="rounded-full w-32 h-32 mb-4 shadow-xl border-4 border-white dark:border-gray-800" />
+    <img src="https://i.pravatar.cc/150"
+      class="rounded-full w-32 h-32 mb-4 shadow-xl border-4 border-white dark:border-gray-800" />
     <p id="greeting" class="text-lg mb-2 text-gray-600 dark:text-gray-400"></p>
     <h2 class="text-5xl font-extrabold mb-4 bg-gradient-to-r from-indigo-500 to-pink-500 text-transparent bg-clip-text">
       Hi, I'm Jeevan 👋
     </h2>
-   <p class="text-lg max-w-xl text-gray-700 dark:text-gray-400">
-  I'm a <span id="typingText" class="text-indigo-500 font-semibold"></span>
-</p>
-<p class="mt-4 max-w-2xl text-gray-600 dark:text-gray-400 leading-relaxed">
-  I am a passionate developer who enjoys building modern web applications using
-  technologies like React, Node.js, and MongoDB. I love solving real-world problems,
-  learning new technologies, and continuously improving my skills to create impactful digital experiences.
-</p>
+    <p class="text-lg max-w-xl text-gray-700 dark:text-gray-400">
+      I'm a <span id="typingText" class="text-indigo-500 font-semibold"></span>
+    </p>
+    <p class="mt-4 max-w-2xl text-gray-600 dark:text-gray-400 leading-relaxed">
+      I am a passionate developer who enjoys building modern web applications using
+      technologies like React, Node.js, and MongoDB. I love solving real-world problems,
+      learning new technologies, and continuously improving my skills to create impactful digital experiences.
+    </p>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="py-20 px-6">
     <h2 class="text-3xl font-bold text-center mb-10">✨ Projects</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gradient-to-br from-white to-blue-100 dark:from-[#0f1226] dark:to-[#0a0c1a] p-6 rounded-xl shadow-lg hover:scale-105 transition">
+      <div
+        class="bg-gradient-to-br from-white to-blue-100 dark:from-[#0f1226] dark:to-[#0a0c1a] p-6 rounded-xl shadow-lg hover:scale-105 transition">
         <i data-feather="monitor" class="text-indigo-400 mb-2"></i>
         <h3 class="font-bold text-xl">Portfolio Website</h3>
         <p class="mt-2 text-gray-700 dark:text-gray-400">Responsive portfolio using Tailwind CSS.</p>
       </div>
-      <div class="bg-gradient-to-br from-white to-purple-100 dark:from-[#0f1226] dark:to-[#0a0c1a] p-6 rounded-xl shadow-lg hover:scale-105 transition">
+      <div
+        class="bg-gradient-to-br from-white to-purple-100 dark:from-[#0f1226] dark:to-[#0a0c1a] p-6 rounded-xl shadow-lg hover:scale-105 transition">
         <i data-feather="shopping-cart" class="text-purple-400 mb-2"></i>
         <h3 class="font-bold text-xl">E-Commerce App</h3>
         <p class="mt-2 text-gray-700 dark:text-gray-400">Full-stack MERN app with authentication.</p>
       </div>
-      <div class="bg-gradient-to-br from-white to-pink-100 dark:from-[#0f1226] dark:to-[#0a0c1a] p-6 rounded-xl shadow-lg hover:scale-105 transition">
+      <div
+        class="bg-gradient-to-br from-white to-pink-100 dark:from-[#0f1226] dark:to-[#0a0c1a] p-6 rounded-xl shadow-lg hover:scale-105 transition">
         <i data-feather="message-circle" class="text-pink-400 mb-2"></i>
         <h3 class="font-bold text-xl">CLI Based Learning Management System(LMS)</h3>
         <p class="mt-2 text-gray-700 dark:text-gray-400">Using Node js</p>
@@ -79,7 +87,8 @@
   </section>
 
   <!-- Education -->
-  <section id="education" class="py-20 px-6 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 dark:bg-[#070916]">
+  <section id="education"
+    class="py-20 px-6 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 dark:bg-[#070916]">
     <h2 class="text-3xl font-bold text-center mb-10">🎓 Education</h2>
     <div class="max-w-3xl mx-auto space-y-6">
       <div class="p-6 bg-white/90 dark:bg-[#0f1226] rounded-lg shadow border dark:border-gray-800">
@@ -94,92 +103,160 @@
       </div>
     </div>
   </section>
+<!-- newwwww -->
+ <section id="skills" class="py-20 px-6">
+  <h2 class="text-3xl font-bold text-center mb-6">⚡ Skills</h2>
 
-  <!-- Skills -->
-  <section id="skills" class="py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">⚡ Skills</h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-      <div class="p-6 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-[#1a1208] dark:to-[#120c05] rounded-lg shadow">
-        <i class="devicon-html5-plain colored text-4xl"></i>
-        <p class="mt-2 font-semibold">HTML</p>
-      </div>
-      <div class="p-6 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-[#08131f] dark:to-[#050b14] rounded-lg shadow">
-        <i class="devicon-css3-plain colored text-4xl"></i>
-        <p class="mt-2 font-semibold">CSS</p>
-      </div>
-      <div class="p-6 bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-[#1f1a05] dark:to-[#141004] rounded-lg shadow">
-        <i class="devicon-javascript-plain colored text-4xl"></i>
-        <p class="mt-2 font-semibold">JavaScript</p>
-      </div>
-      <div class="p-6 bg-gradient-to-br from-cyan-100 to-cyan-200 dark:from-[#071a1a] dark:to-[#041212] rounded-lg shadow">
-        <i class="devicon-react-original colored text-4xl"></i>
-        <p class="mt-2 font-semibold">React</p>
-      </div>
-      <div class="p-6 bg-gradient-to-br from-green-100 to-green-200 dark:from-[#071a0f] dark:to-[#04120a] rounded-lg shadow">
-        <i class="devicon-nodejs-plain colored text-4xl"></i>
-        <p class="mt-2 font-semibold">Node.js</p>
-      </div>
-      <div class="p-6 bg-gradient-to-br from-teal-100 to-teal-200 dark:from-[#071a18] dark:to-[#041211] rounded-lg shadow">
-        <i class="devicon-tailwindcss-plain colored text-4xl"></i>
-        <p class="mt-2 font-semibold">Tailwind</p>
-      </div>
+  <!-- Filter Buttons -->
+  <div class="flex flex-wrap justify-center gap-3 mb-6">
+    <button class="filter-btn px-4 py-2 bg-indigo-500 text-white rounded" data-category="all">All</button>
+    <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded" data-category="frontend">Frontend</button>
+    <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded" data-category="backend">Backend</button>
+        <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded" data-category="DataBase">DataBase</button>
+    <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded" data-category="tools">Tools</button>
+  </div>
+
+  <!-- Sort Dropdown -->
+  <div class="text-center mb-6">
+    <select id="sortSkills" class="p-2 rounded border dark:bg-[#0f1226] ">
+      <option value="default" class="rounded">Sort</option>
+      <option value="az">A → Z</option>
+      <option value="za">Z → A</option>
+    </select>
+  </div>
+
+  <!-- Skills Grid -->
+  <!-- Skills Section -->
+<section id="skills" class="py-20 px-6">
+  <h2 class="text-3xl font-bold text-center mb-6">⚡ Skills</h2>
+
+ 
+
+  <!-- Skills Grid -->
+  <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+
+    <!-- Frontend -->
+    <div class="skill-card p-6 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-[#1a1208] dark:to-[#120c05] rounded-lg shadow" data-category="frontend">
+      <i class="devicon-html5-plain colored text-4xl"></i>
+      <p class="mt-2 font-semibold">HTML</p>
     </div>
-  </section>
+
+    <div class="skill-card p-6 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-[#08131f] dark:to-[#050b14] rounded-lg shadow" data-category="frontend">
+      <i class="devicon-css3-plain colored text-4xl"></i>
+      <p class="mt-2 font-semibold">CSS</p>
+    </div>
+
+    <div class="skill-card p-6 bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-[#1f1a05] dark:to-[#141004] rounded-lg shadow" data-category="frontend">
+      <i class="devicon-javascript-plain colored text-4xl"></i>
+      <p class="mt-2 font-semibold">JavaScript</p>
+    </div>
+
+    <div class="skill-card p-6 bg-gradient-to-br from-cyan-100 to-cyan-200 dark:from-[#071a1a] dark:to-[#041212] rounded-lg shadow" data-category="frontend">
+      <i class="devicon-react-original colored text-4xl"></i>
+      <p class="mt-2 font-semibold">React</p>
+    </div>
+
+    <div class="skill-card p-6 bg-gradient-to-br from-teal-100 to-teal-200 dark:from-[#071a18] dark:to-[#041211] rounded-lg shadow" data-category="frontend">
+      <i class="devicon-tailwindcss-plain colored text-4xl"></i>
+      <p class="mt-2 font-semibold">Tailwind</p>
+    </div>
+
+    <!-- Backend -->
+    <div class="skill-card p-6 bg-gradient-to-br from-green-100 to-green-200 dark:from-[#071a0f] dark:to-[#04120a] rounded-lg shadow" data-category="backend">
+      <i class="devicon-nodejs-plain colored text-4xl"></i>
+      <p class="mt-2 font-semibold">Node.js</p>
+    </div>
+
+    <div class="skill-card p-6 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-[#0e0e0e] dark:to-[#050505] rounded-lg shadow" data-category="backend">
+      <i class="devicon-express-original text-4xl text-black dark:text-white"></i>
+      <p class="mt-2 font-semibold">Express.js</p>
+    </div>
+
+    <div class="skill-card p-6 bg-gradient-to-br from-red-100 to-red-200 dark:from-[#1f0b0b] dark:to-[#140505] rounded-lg shadow" data-category="backend">
+      <i class="devicon-java-plain colored text-4xl"></i>
+      <p class="mt-2 font-semibold">Java</p>
+    </div>
+
+    <!-- Database -->
+    <div class="skill-card p-6 bg-gradient-to-br from-indigo-100 to-indigo-200 dark:from-[#0b0f1f] dark:to-[#050814] rounded-lg shadow" data-category="DataBase">
+      <i class="devicon-mongodb-plain colored text-4xl"></i>
+      <p class="mt-2 font-semibold">MongoDB</p>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-card p-6 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-[#08131f] dark:to-[#050b14] rounded-lg shadow" data-category="tools">
+      <i class="devicon-vscode-plain colored text-4xl"></i>
+      <p class="mt-2 font-semibold">VS Code</p>
+    </div>
+
+    <div class="skill-card p-6 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-[#1a1208] dark:to-[#120c05] rounded-lg shadow" data-category="tools">
+      <i class="devicon-postman-plain colored text-4xl"></i>
+      <p class="mt-2 font-semibold">Postman</p>
+    </div>
+
+    <div class="skill-card p-6 bg-gradient-to-br from-green-100 to-green-200 dark:from-[#071a0f] dark:to-[#04120a] rounded-lg shadow" data-category="tools">
+      <span class="text-4xl">🤖</span>
+      <p class="mt-2 font-semibold">ChatGPT</p>
+    </div>
+
+  </div>
+</section>
 
   <!-- Contact -->
   <section id="contact" class="py-20 px-6 bg-gradient-to-r from-indigo-200 via-blue-200 to-pink-200 dark:bg-[#070916]">
     <h2 class="text-3xl font-bold text-center mb-10">📩 Contact Me</h2>
-   <form id="contactForm" class="max-w-xl mx-auto space-y-6 bg-white/80 dark:bg-[#0f1226] p-8 rounded-2xl shadow-xl backdrop-blur">
+    <form id="contactForm"
+      class="max-w-xl mx-auto space-y-6 bg-white/80 dark:bg-[#0f1226] p-8 rounded-2xl shadow-xl backdrop-blur">
 
-  <!-- Name -->
-  <div class="relative">
-    <input id="name" type="text" required placeholder="Enter your name "
-      class="peer w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-pink-500" />
-    <label
-      class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm peer-focus:text-pink-500 bg-white dark:bg-[#0f1226] px-1">
-      
-    </label>
-  </div>
+      <!-- Name -->
+      <div class="relative">
+        <input id="name" type="text" required placeholder="Enter your name "
+          class="peer w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-pink-500" />
+        <label
+          class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm peer-focus:text-pink-500 bg-white dark:bg-[#0f1226] px-1">
 
-  <!-- Email -->
-  <div class="relative">
-    <input id="email" type="email" required placeholder="Enter your Email"
-      class="peer w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500" />
-    <label
-      class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm peer-focus:text-indigo-500 bg-white dark:bg-[#0f1226] px-1">
-    
-    </label>
-  </div>
+        </label>
+      </div>
 
-  <!-- Message -->
-  <div class="relative">
-    <textarea id="message" required placeholder="Message"
-      class="peer w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-purple-500 h-32"></textarea>
-    <label
-      class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm peer-focus:text-purple-500 bg-white dark:bg-[#0f1226] px-1">
-      
-    </label>
-  </div>
+      <!-- Email -->
+      <div class="relative">
+        <input id="email" type="email" required placeholder="Enter your Email"
+          class="peer w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+        <label
+          class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm peer-focus:text-indigo-500 bg-white dark:bg-[#0f1226] px-1">
 
-  <!-- Button -->
-  <button type="submit"
-    class="w-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white py-3 rounded-xl font-semibold hover:scale-105 active:scale-95 transition-all duration-300 shadow-md">
-    Send Message 🚀
-  </button>
+        </label>
+      </div>
 
-</form>
-  </section> 
-   
-   
+      <!-- Message -->
+      <div class="relative">
+        <textarea id="message" required placeholder="Message"
+          class="peer w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-purple-500 h-32"></textarea>
+        <label
+          class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm peer-focus:text-purple-500 bg-white dark:bg-[#0f1226] px-1">
+
+        </label>
+      </div>
+
+      <!-- Button -->
+      <button type="submit"
+        class="w-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white py-3 rounded-xl font-semibold hover:scale-105 active:scale-95 transition-all duration-300 shadow-md">
+        Send Message 🚀
+      </button>
+
+    </form>
+  </section>
+
+
   <!-- Footer -->
   <footer class="text-center p-6 bg-gradient-to-r from-black to-gray-900 text-gray-400">
     <p>© 2026 Jeevan NS 🚀</p>
   </footer>
-<!-- Back to Top Button -->  
-<button id="backToTop"
-  class="fixed bottom-6 right-6  z-50 bg-gradient-to-r from-indigo-600 to-pink-600 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300">
-  ↑
-</button> 
+  <!-- Back to Top Button -->
+  <button id="backToTop"
+    class="fixed bottom-6 right-6  z-50 bg-gradient-to-r from-indigo-600 to-pink-600 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300">
+    ↑
+  </button>
 
 
   <script>
@@ -188,12 +265,14 @@
     }
     feather.replace();
   </script>
-   
-   <script src="JS/script.js"></script>
-   <script src="JS/ui.js"></script>
-   <script src="JS/scrool.js"></script>
-   <script src="JS/Animation.js"></script>
-   <script src="JS/Day.js"></script>
-   <script src="JS/Alert.js"></script>
+
+  <script src="JS/script.js"></script>
+  <script src="JS/ui.js"></script>
+  <script src="JS/scrool.js"></script>
+  <script src="JS/Animation.js"></script>
+  <script src="JS/Day.js"></script>
+  <script src="JS/Alert.js"></script>
+  <script src="JS/sort.js"></script>
 </body>
+
 </html>
