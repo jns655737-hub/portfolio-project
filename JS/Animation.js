@@ -1,8 +1,7 @@
 const roles = [
-  "Full Stack Developer",
   "Frontend Developer",
   "Backend Developer",
-  "MERN Stack Developer"
+  "MERN Full Stack Developer"
 ];
 
 let index = 0;        // which word
