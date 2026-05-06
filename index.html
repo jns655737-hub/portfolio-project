@@ -28,20 +28,48 @@
   <nav
     class="fixed w-full top-0 bg-white/80 backdrop-blur dark:bg-[#0b0d1a]/90 shadow z-50 border-b dark:border-gray-800">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold bg-gradient-to-r from-indigo-500 to-pink-500 text-transparent bg-clip-text">Jeevan NS
+
+      <!-- Logo -->
+      <h1 class="text-xl font-bold bg-gradient-to-r from-indigo-500 to-pink-500 text-transparent bg-clip-text">
+        Jeevan NS
       </h1>
+
+      <!-- Desktop Menu -->
       <div class="space-x-6 hidden md:flex font-medium">
-        <a href="#projects" class="nav-link hover:text-purple-400">Projects</a>
-        <a href="#education" class="nav-link hover:text-purple-400">Education</a>
-        <a href="#skills" class="nav-link hover:text-purple-400">Skills</a>
-        <a href="#contact" class="nav-link hover:text-purple-400">Contact</a>
+        <a href="#projects" class="hover:text-purple-400">Projects</a>
+        <a href="#education" class="hover:text-purple-400">Education</a>
+        <a href="#skills" class="hover:text-purple-400">Skills</a>
+        <a href="#contact" class="hover:text-purple-400">Contact</a>
       </div>
-      <button onclick="toggleTheme()"
-        class="ml-4 bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-3 py-1 rounded">
-        🌙
-      </button>
+
+      <!-- Right Side Buttons -->
+      <div class="flex items-center gap-3">
+
+        <!-- Theme Toggle -->
+        <button onclick="toggleTheme()"
+          class="bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-3 py-1 rounded">
+          🌙
+        </button>
+
+        <!-- Hamburger -->
+        <button id="menuBtn" class="md:hidden text-2xl">
+          <i data-feather="menu"></i>
+        </button>
+
+      </div>
+
     </div>
   </nav>
+  <!-- newww -->
+  <div id="mobileMenu"
+    class="hidden flex-col space-y-4 p-4 bg-white dark:bg-[#0b0d1a] md:hidden shadow absolute top-[64px] w-full z-40">
+
+    <a href="#projects" class="block">Projects</a>
+    <a href="#education" class="block">Education</a>
+    <a href="#skills" class="block">Skills</a>
+    <a href="#contact" class="block">Contact</a>
+
+  </div>
 
   <!-- Hero Section -->
   <section class="h-screen flex flex-col justify-center items-center text-center px-4">
@@ -60,27 +88,27 @@
       learning new technologies, and continuously improving my skills to create impactful digital experiences.
     </p>
     <!-- newww -->
-     <div class="flex gap-6 mt-6">
+    <div class="flex gap-6 mt-6">
 
-  <!-- LinkedIn -->
-  <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank"
-    class="social-icon text-blue-600 hover:text-blue-800 text-2xl">
-    <i data-feather="linkedin"></i>
-  </a>
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank"
+        class="social-icon text-blue-600 hover:text-blue-800 text-2xl">
+        <i data-feather="linkedin"></i>
+      </a>
 
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/__mysore_days_0015?igsh=MXQzN2ZqYWc2ZWdu" target="_blank"
-    class="social-icon text-pink-500 hover:text-pink-700 text-2xl">
-    <i data-feather="instagram"></i>
-  </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/__mysore_days_0015?igsh=MXQzN2ZqYWc2ZWdu" target="_blank"
+        class="social-icon text-pink-500 hover:text-pink-700 text-2xl">
+        <i data-feather="instagram"></i>
+      </a>
 
-  <!-- Email -->
-  <a href="mailto:your-jns655737@gmail.com"
-  class="social-icon text-gray-700 dark:text-gray-300 hover:text-indigo-500 text-2xl">
-  <i data-feather="mail"></i>
-</a>
+      <!-- Email -->
+      <a href="mailto:your-jns655737@gmail.com"
+        class="social-icon text-gray-700 dark:text-gray-300 hover:text-indigo-500 text-2xl">
+        <i data-feather="mail"></i>
+      </a>
 
-</div>
+    </div>
   </section>
 
   <!-- Projects -->
@@ -129,103 +157,129 @@
       </div>
     </div>
   </section>
-<!-- newwwww -->
- <section id="skills" class="py-20 px-6">
-  <h2 class="text-3xl font-bold text-center mb-6">⚡ Skills</h2>
+  <!-- newwwww -->
+  <section id="skills" class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-6">⚡ Skills</h2>
 
-  <!-- Filter Buttons -->
-  <div class="flex flex-wrap justify-center gap-3 mb-6">
-    <button class="filter-btn px-4 py-2 bg-indigo-500 text-white rounded" data-category="all">All</button>
-    <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded" data-category="frontend">Frontend</button>
-    <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded" data-category="backend">Backend</button>
-        <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded" data-category="DataBase">DataBase</button>
-    <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded" data-category="tools">Tools</button>
-  </div>
-
-  <!-- Sort Dropdown -->
-  <div class="text-center mb-6">
-    <select id="sortSkills" class="p-2 rounded border dark:bg-[#0f1226] ">
-      <option value="default" class="rounded">Sort</option>
-      <option value="az">A → Z</option>
-      <option value="za">Z → A</option>
-    </select>
-  </div>
-
-  <!-- Skills Grid -->
-  <!-- Skills Section -->
-  <h2 class="text-3xl font-bold text-center mb-6">⚡ Skills</h2>
-
- 
-
-  <!-- Skills Grid -->
-  <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-
-    <!-- Frontend -->
-    <div class="skill-card p-6 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-[#1a1208] dark:to-[#120c05] rounded-lg shadow" data-category="frontend">
-      <i class="devicon-html5-plain colored text-4xl"></i>
-      <p class="mt-2 font-semibold">HTML</p>
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center gap-3 mb-6">
+      <button class="filter-btn px-4 py-2 bg-indigo-500 text-white rounded" data-category="all">All</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded"
+        data-category="frontend">Frontend</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded" data-category="backend">Backend</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded"
+        data-category="DataBase">DataBase</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded" data-category="tools">Tools</button>
     </div>
 
-    <div class="skill-card p-6 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-[#08131f] dark:to-[#050b14] rounded-lg shadow" data-category="frontend">
-      <i class="devicon-css3-plain colored text-4xl"></i>
-      <p class="mt-2 font-semibold">CSS</p>
+    <!-- Sort Dropdown -->
+    <div class="text-center mb-6">
+      <select id="sortSkills" class="p-2 rounded border dark:bg-[#0f1226] ">
+        <option value="default" class="rounded">Sort</option>
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+      </select>
     </div>
 
-    <div class="skill-card p-6 bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-[#1f1a05] dark:to-[#141004] rounded-lg shadow" data-category="frontend">
-      <i class="devicon-javascript-plain colored text-4xl"></i>
-      <p class="mt-2 font-semibold">JavaScript</p>
-    </div>
+    <!-- Skills Grid -->
+    <!-- Skills Section -->
+    <h2 class="text-3xl font-bold text-center mb-6">⚡ Skills</h2>
 
-    <div class="skill-card p-6 bg-gradient-to-br from-cyan-100 to-cyan-200 dark:from-[#071a1a] dark:to-[#041212] rounded-lg shadow" data-category="frontend">
-      <i class="devicon-react-original colored text-4xl"></i>
-      <p class="mt-2 font-semibold">React</p>
-    </div>
 
-    <div class="skill-card p-6 bg-gradient-to-br from-teal-100 to-teal-200 dark:from-[#071a18] dark:to-[#041211] rounded-lg shadow" data-category="frontend">
-      <i class="devicon-tailwindcss-plain colored text-4xl"></i>
-      <p class="mt-2 font-semibold">Tailwind</p>
-    </div>
 
-    <!-- Backend -->
-    <div class="skill-card p-6 bg-gradient-to-br from-green-100 to-green-200 dark:from-[#071a0f] dark:to-[#04120a] rounded-lg shadow" data-category="backend">
-      <i class="devicon-nodejs-plain colored text-4xl"></i>
-      <p class="mt-2 font-semibold">Node.js</p>
-    </div>
+    <!-- Skills Grid -->
+    <div id="skillsContainer" class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
 
-    <div class="skill-card p-6 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-[#0e0e0e] dark:to-[#050505] rounded-lg shadow" data-category="backend">
-      <i class="devicon-express-original text-4xl text-black dark:text-white"></i>
-      <p class="mt-2 font-semibold">Express.js</p>
-    </div>
+      <!-- Frontend -->
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-[#1a1208] dark:to-[#120c05] rounded-lg shadow"
+        data-category="frontend">
+        <i class="devicon-html5-plain colored text-4xl"></i>
+        <p class="mt-2 font-semibold">HTML</p>
+      </div>
 
-    <div class="skill-card p-6 bg-gradient-to-br from-red-100 to-red-200 dark:from-[#1f0b0b] dark:to-[#140505] rounded-lg shadow" data-category="backend">
-      <i class="devicon-java-plain colored text-4xl"></i>
-      <p class="mt-2 font-semibold">Java</p>
-    </div>
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-[#08131f] dark:to-[#050b14] rounded-lg shadow"
+        data-category="frontend">
+        <i class="devicon-css3-plain colored text-4xl"></i>
+        <p class="mt-2 font-semibold">CSS</p>
+      </div>
 
-    <!-- Database -->
-    <div class="skill-card p-6 bg-gradient-to-br from-indigo-100 to-indigo-200 dark:from-[#0b0f1f] dark:to-[#050814] rounded-lg shadow" data-category="DataBase">
-      <i class="devicon-mongodb-plain colored text-4xl"></i>
-      <p class="mt-2 font-semibold">MongoDB</p>
-    </div>
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-yellow-100 to-yellow-200 dark:from-[#1f1a05] dark:to-[#141004] rounded-lg shadow"
+        data-category="frontend">
+        <i class="devicon-javascript-plain colored text-4xl"></i>
+        <p class="mt-2 font-semibold">JavaScript</p>
+      </div>
 
-    <!-- Tools -->
-    <div class="skill-card p-6 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-[#08131f] dark:to-[#050b14] rounded-lg shadow" data-category="tools">
-      <i class="devicon-vscode-plain colored text-4xl"></i>
-      <p class="mt-2 font-semibold">VS Code</p>
-    </div>
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-cyan-100 to-cyan-200 dark:from-[#071a1a] dark:to-[#041212] rounded-lg shadow"
+        data-category="frontend">
+        <i class="devicon-react-original colored text-4xl"></i>
+        <p class="mt-2 font-semibold">React</p>
+      </div>
 
-    <div class="skill-card p-6 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-[#1a1208] dark:to-[#120c05] rounded-lg shadow" data-category="tools">
-      <i class="devicon-postman-plain colored text-4xl"></i>
-      <p class="mt-2 font-semibold">Postman</p>
-    </div>
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-teal-100 to-teal-200 dark:from-[#071a18] dark:to-[#041211] rounded-lg shadow"
+        data-category="frontend">
+        <i class="devicon-tailwindcss-plain colored text-4xl"></i>
+        <p class="mt-2 font-semibold">Tailwind</p>
+      </div>
 
-    <div class="skill-card p-6 bg-gradient-to-br from-green-100 to-green-200 dark:from-[#071a0f] dark:to-[#04120a] rounded-lg shadow" data-category="tools">
-      <span class="text-4xl">🤖</span>
-      <p class="mt-2 font-semibold">ChatGPT</p>
-    </div>
+      <!-- Backend -->
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-green-100 to-green-200 dark:from-[#071a0f] dark:to-[#04120a] rounded-lg shadow"
+        data-category="backend">
+        <i class="devicon-nodejs-plain colored text-4xl"></i>
+        <p class="mt-2 font-semibold">Node.js</p>
+      </div>
 
-  </div>
-</section>
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-[#0e0e0e] dark:to-[#050505] rounded-lg shadow"
+        data-category="backend">
+        <i class="devicon-express-original text-4xl text-black dark:text-white"></i>
+        <p class="mt-2 font-semibold">Express.js</p>
+      </div>
+
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-red-100 to-red-200 dark:from-[#1f0b0b] dark:to-[#140505] rounded-lg shadow"
+        data-category="backend">
+        <i class="devicon-java-plain colored text-4xl"></i>
+        <p class="mt-2 font-semibold">Java</p>
+      </div>
+
+      <!-- Database -->
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-indigo-100 to-indigo-200 dark:from-[#0b0f1f] dark:to-[#050814] rounded-lg shadow"
+        data-category="DataBase">
+        <i class="devicon-mongodb-plain colored text-4xl"></i>
+        <p class="mt-2 font-semibold">MongoDB</p>
+      </div>
+
+      <!-- Tools -->
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-[#08131f] dark:to-[#050b14] rounded-lg shadow"
+        data-category="tools">
+        <i class="devicon-vscode-plain colored text-4xl"></i>
+        <p class="mt-2 font-semibold">VS Code</p>
+      </div>
+
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-orange-100 to-orange-200 dark:from-[#1a1208] dark:to-[#120c05] rounded-lg shadow"
+        data-category="tools">
+        <i class="devicon-postman-plain colored text-4xl"></i>
+        <p class="mt-2 font-semibold">Postman</p>
+      </div>
+
+      <div
+        class="skill-card p-6 bg-gradient-to-br from-green-100 to-green-200 dark:from-[#071a0f] dark:to-[#04120a] rounded-lg shadow"
+        data-category="tools">
+        <span class="text-4xl">🤖</span>
+        <p class="mt-2 font-semibold">ChatGPT</p>
+      </div>
+
+    </div>
+  </section>
 
   <!-- Contact -->
   <section id="contact" class="py-20 px-6 bg-gradient-to-r from-indigo-200 via-blue-200 to-pink-200 dark:bg-[#070916]">
@@ -299,6 +353,7 @@
   <script src="JS/Alert.js"></script>
   <script src="JS/sort.js"></script>
   <script src="JS/email.js"></script>
+  <script src="JS/menu.js"></script>
 </body>
 
 </html>
