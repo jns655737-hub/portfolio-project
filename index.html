@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jeevan NS | Portfolio</title>
+  <!-- ADD THIS INSIDE <head> -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -282,49 +284,47 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 px-6 bg-gradient-to-r from-indigo-200 via-blue-200 to-pink-200 dark:bg-[#070916]">
-    <h2 class="text-3xl font-bold text-center mb-10">📩 Contact Me</h2>
-    <form id="contactForm"
-      class="max-w-xl mx-auto space-y-6 bg-white/80 dark:bg-[#0f1226] p-8 rounded-2xl shadow-xl backdrop-blur">
+<section id="contact" class="py-20 px-6 bg-gradient-to-r from-indigo-200 via-blue-200 to-pink-200 dark:bg-[#070916]">
+  <h2 class="text-3xl font-bold text-center mb-10">📩 Contact Me</h2>
 
-      <!-- Name -->
-      <div class="relative">
-        <input id="name" type="text" required placeholder="Enter your name "
-          class="peer w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-pink-500" />
-        <label
-          class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm peer-focus:text-pink-500 bg-white dark:bg-[#0f1226] px-1">
+  <form id="contactForm"
+    class="max-w-xl mx-auto space-y-6 bg-white/80 dark:bg-[#0f1226] p-8 rounded-2xl shadow-xl backdrop-blur">
 
-        </label>
-      </div>
+    <!-- Hidden Honeypot (Spam Protection) -->
+    <input type="text" id="honeypot" class="hidden">
 
-      <!-- Email -->
-      <div class="relative">
-        <input id="email" type="email" required placeholder="Enter your Email"
-          class="peer w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500" />
-        <label
-          class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm peer-focus:text-indigo-500 bg-white dark:bg-[#0f1226] px-1">
+    <input id="name" type="text" required placeholder="Enter your name"
+      class="w-full p-3 rounded border bg-transparent focus:ring-2 focus:ring-pink-500" />
 
-        </label>
-      </div>
+    <input id="email" type="email" required placeholder="Enter your Email"
+      class="w-full p-3 rounded border bg-transparent focus:ring-2 focus:ring-indigo-500" />
 
-      <!-- Message -->
-      <div class="relative">
-        <textarea id="message" required placeholder="Message"
-          class="peer w-full p-3 rounded border border-gray-300 dark:border-gray-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-purple-500 h-32"></textarea>
-        <label
-          class="absolute left-3 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-2 peer-focus:text-sm peer-focus:text-purple-500 bg-white dark:bg-[#0f1226] px-1">
+    <textarea id="message" required placeholder="Message"
+      class="w-full p-3 rounded border h-32 bg-transparent focus:ring-2 focus:ring-purple-500"></textarea>
 
-        </label>
-      </div>
+    <!-- Button -->
+    <button id="submitBtn" type="submit"
+      class="w-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white py-3 rounded-xl font-semibold transition flex justify-center items-center gap-2">
 
-      <!-- Button -->
-      <button type="submit"
-        class="w-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white py-3 rounded-xl font-semibold hover:scale-105 active:scale-95 transition-all duration-300 shadow-md">
-        Send Message 🚀
-      </button>
+      <span id="btnText">Send Message 🚀</span>
 
-    </form>
-  </section>
+      <!-- Loader -->
+      <svg id="loader" class="hidden animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg"
+        fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor"
+          d="M4 12a8 8 0 018-8v8H4z"></path>
+      </svg>
+
+    </button>
+
+  </form>
+</section>
+
+<!-- Toast Notification -->
+<div id="toast"
+  class="fixed bottom-6 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg text-white shadow-lg opacity-0 transition-all duration-500">
+</div>
 
 
   <!-- Footer -->
@@ -337,7 +337,60 @@
     ↑
   </button>
 
+<script>
+  // 🔑 Initialize EmailJS
+  (function () {
+    emailjs.init("mVoXEVNBmWZYRgb5W"); 
+  })();
 
+  const form = document.getElementById("contactForm");
+  const btnText = document.getElementById("btnText");
+  const loader = document.getElementById("loader");
+  const toast = document.getElementById("toast");
+
+  function showToast(message, success = true) {
+    toast.innerText = message;
+    toast.className =
+      "fixed bottom-6 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-lg text-white shadow-lg opacity-100 " +
+      (success ? "bg-green-600" : "bg-red-600");
+
+    setTimeout(() => {
+      toast.classList.add("opacity-0");
+    }, 3000);
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    //  Spam Protection
+    if (document.getElementById("honeypot").value !== "") {
+      return;
+    }
+
+    // Show loader
+    btnText.textContent = "Sending...";
+    loader.classList.remove("hidden");
+
+    const params = {
+      from_name: document.getElementById("name").value,
+      from_email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_4xtym5i", "template_puyom59", params)
+      .then(() => {
+        showToast("✅ Message sent successfully!");
+        form.reset();
+      })
+      .catch(() => {
+        showToast("❌ Failed to send message", false);
+      })
+      .finally(() => {
+        btnText.textContent = "Send Message 🚀";
+        loader.classList.add("hidden");
+      });
+  });
+</script>
   <script>
     function toggleTheme() {
       document.documentElement.classList.toggle('dark');
